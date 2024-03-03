@@ -16,7 +16,19 @@ struct Pessoa {
 };
 
 int main() {
-  Pessoa pessoas[TAM];
+  //Pessoa pessoas[TAM];
+  Pessoa *pessoas = new Pessoa[TAM];
+  // A diferenca entre essas duas declaracoes eh que a palavra-chave new é usada para alocar memória dinamicamente.
+  /* No primeiro caso, a memória é alocada na stack ou na área de dados estática, dependendo de onde a declaração 
+    ocorre. Isso significa que a memória é liberada automaticamente quando a variável sai de escopo. Essa forma é 
+    mais simples e direta, especialmente quando o tamanho do array é conhecido em tempo de compilação e não precisa 
+    ser alterado durante a execução do programa. */
+  /* No segundo caso, a memória é alocada dinamicamente no heap, o que significa que o array persistirá até que seja 
+    explicitamente desalocado usando delete[] pessoas;. É útil quando o tamanho do array não é conhecido em tempo de 
+    compilação ou quando se deseja controlar manualmente o tempo de vida do array. */
+  /* Portanto, a escolha entre as duas formas depende das necessidades específicas do programa, da vida útil 
+    necessária para o array e da complexidade do código. */
+
 
   cout << "Informe os dados das pessoas:\n";
 
