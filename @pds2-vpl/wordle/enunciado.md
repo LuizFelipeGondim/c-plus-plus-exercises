@@ -16,44 +16,38 @@ Caso a palavra seja igual a chave, você deve imprimir "GANHOU!" e terminar o pr
 Depois de 5 tentativas, caso você não tenha acertado a palavra, você deve imprimir: "PERDEU!", seguido da palavra correta, separada por um espaço.
 Exemplo 1 (E: Entrada, S: Saída)
 
-(E/S)	 Valor	 Explicação
-E	7	Palavra #7 do Arquivo. (No caso a palavra é "MUITO")
-E	TALCO	Primeira tentativa. Palavra TALCO
-S	t***O (ALC)	Saída indicando que a letra T está presente mas no lugar errado, a letra O está presente e no lugar certo e
-os caracteres A, L, C não estão presentes
-E	PERTO	Segunda tentativa. Palavra PERTO
-S	***TO (ALCPER)	Saída indicando que as letras T e O estão presentes e no lugar certo e as letras A, L, C (da primeira tentativa)
-e P, E, R da segunda não estão presentes.
-E	MISTO	Terceira tentativa. Palavra MISTO
-S	Mi*TO (ALCPERS)	Saída indicando que a letra I está presente mas no lugar errado, as letras M, T e O estão presentes e no lugar
-certo e as letras A, L, C (da primeira tentativa), P, E, R da segunda e S da terceira não estão presentes.
-E	MUITO	Terceira tentativa. Palavra MUITO
-S	MUITO (ALCPERS)	Saída indicando que todas as letras estão corretas e no lugar certo e as letras A, L, C (da primeira tentativa),
-P, E, R da segunda e S da terceira não estão presentes
-S	GANHOU!	Impressão do resultado final
+<em> EM RAW ESTA MAIS LEGIVEL <em>
+
+(E/S)	 Valor           Explicação <br />
+E	7	                   Palavra #7 do Arquivo. (No caso a palavra é "MUITO"). <br />
+E	TALCO	               Primeira tentativa. Palavra TALCO. <br />
+S	t***O (ALC)	         Saída indicando que a letra T está presente mas no lugar errado, a letra O está presente e no lugar certo e os caracteres A, L, C não estão presentes. <br />
+E	PERTO	               Segunda tentativa. Palavra PERTO. <br />
+S	***TO (ALCPER)	     Saída indicando que as letras T e O estão presentes e no lugar certo e as letras A, L, C (da primeira tentativa) e P, E, R da segunda não estão presentes. <br />
+E	MISTO	               Terceira tentativa. Palavra MISTO. <br />
+S	Mi*TO (ALCPERS)	     Saída indicando que a letra I está presente mas no lugar errado, as letras M, T e O estão presentes e no lugar certo e as letras A, L, C (da primeira tentativa), P, E, R da segunda e S 
+                       da terceira não estão presentes. <br />
+E	MUITO	               Quarta tentativa. Palavra MUITO. <br />
+S	MUITO (ALCPERS)	     Saída indicando que todas as letras estão corretas e no lugar certo e as letras A, L, C (da primeira tentativa), P, E, R da segunda e S da terceira não estão presentes. <br />
+S	GANHOU!	             Impressão do resultado final. <br />
+
+
 Exemplo 2 (E: Entrada, S: Saída)
 
-(E/S)	 Valor	 Explicação
-E	26	Palavra #26 do Arquivo. (No caso a palavra é "ZEBRA")
-E	QUILO	Primeira tentativa. Palavra QUILO
-S	***** (QUILO)
-Saída indicando que nenhuma letra está presente
-E	CHAVE	Segunda tentativa. Palavra CHAVE
-S	**a*e (QUILOCHV)	Saída indicando que as letras A e E estão presentes mas no lugar errado. C, H, V não estão presentes e foram adicionadas
-à lista de erros.
-E	ANTES	Terceira tentativa. Palavra ANTES
-S	a**e* (QUILOCHVNTS)
-Saída indicando que as letras A e E estão presentes mas continuam lugar errado. N, T, S não estão presentes e foram
-adicionadas à lista de erros.
-E	VERGA	Quarta tentativa. Palavra VERGA
-S	*Er*A (QUILOCHVNTSG)
-Saída indicando que as letras A e E estão presentes e no lugar e a letra r está presente mas fora do lugar. G não está
-presente e foi adicionada à lista de erros. Obs. a letra V já estava presente na lista de erros e não foi adicionada novamente.
-E	 PEDRA	Quinta e última tentativa. Palavra PEDRA
-S	 *E*RA (QUILOCHVNTSGPD)	Saída indicando que as letras A, E e R estão presentes e no lugar certo. P, D  não estão presentes e foram
-adicionadas à lista de erros.
-S	PERDEU! ZEBRA
-Como não acertou em 5 tentativas, imprimiu a palavra "PERDEU!" seguida de um espaço e a chave correta. 
+(E/S)	 Valor	                 Explicação <br />
+E	26	                         Palavra #26 do Arquivo. (No caso a palavra é "ZEBRA"). <br />
+E	QUILO	                       Primeira tentativa. Palavra QUILO. <br />
+S	***** (QUILO)                Saída indicando que nenhuma letra está presente. <br />
+E	CHAVE	                       Segunda tentativa. Palavra CHAVE. <br />
+S	**a*e (QUILOCHV)	           Saída indicando que as letras A e E estão presentes mas no lugar errado. C, H, V não estão presentes e foram adicionadas à lista de erros. <br />
+E	ANTES	                       Terceira tentativa. Palavra ANTES. <br />
+S	a**e* (QUILOCHVNTS)          Saída indicando que as letras A e E estão presentes mas continuam lugar errado. N, T, S não estão presentes e foram adicionadas à lista de erros. <br />
+E	VERGA	                       Quarta tentativa. Palavra VERGA. <br />
+S	*Er*A (QUILOCHVNTSG)         Saída indicando que as letras A e E estão presentes e no lugar e a letra r está presente mas fora do lugar. G não está presente e foi adicionada à lista de erros. 
+                               Obs. a letra V já estava presente na lista de erros e não foi adicionada novamente. <br />
+E	 PEDRA	                     Quinta e última tentativa. Palavra PEDRA. <br />
+S	 *E*RA (QUILOCHVNTSGPD)	     Saída indicando que as letras A, E e R estão presentes e no lugar certo. P, D  não estão presentes e foram adicionadas à lista de erros. <br />
+S	PERDEU! ZEBRA                Como não acertou em 5 tentativas, imprimiu a palavra "PERDEU!" seguida de um espaço e a chave correta. <br />
 
 Observações Finais:
 - É obrigatório o uso de Strings e Streams. char *, printf, scanf e similares estão vetados!
