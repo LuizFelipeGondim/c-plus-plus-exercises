@@ -16,8 +16,6 @@ Caso a palavra seja igual a chave, você deve imprimir "GANHOU!" e terminar o pr
 Depois de 5 tentativas, caso você não tenha acertado a palavra, você deve imprimir: "PERDEU!", seguido da palavra correta, separada por um espaço.
 Exemplo 1 (E: Entrada, S: Saída)
 
-<em> EM RAW ESTA MAIS LEGIVEL <em>
-
 (E/S)	 Valor           Explicação <br />
 E	7	                   Palavra #7 do Arquivo. (No caso a palavra é "MUITO"). <br />
 E	TALCO	               Primeira tentativa. Palavra TALCO. <br />
