@@ -26,7 +26,7 @@ void ContaBancaria::saque(float valor) {
 }
 
 void ContaBancaria::pix(ContaBancaria &contaDestino, float valor) {
-  if (_saldo > valor) {
+  if (_saldo >= valor) {
     contaDestino._saldo += valor;
     _saldo -= valor;
     cout << "pix efetuado" << endl;

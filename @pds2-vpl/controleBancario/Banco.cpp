@@ -43,7 +43,7 @@ ContaBancaria* Banco::pesquisa(int id) {
       return _contas[i];
     } 
   }
-  cout << "ERRO: conta inexistente" << endl;
+
   return nullptr;
 }
 

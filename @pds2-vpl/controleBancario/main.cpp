@@ -29,8 +29,11 @@ int main() {
         cin >> id >> valor;
         conta = banco->pesquisa(id);
 
-        if (conta != nullptr)
+        if (conta != nullptr) {
           conta->deposito(valor);
+        } else {
+          cout << "ERRO: conta inexistente" << endl;
+        }
 
         break;
 
@@ -38,8 +41,11 @@ int main() {
         cin >> id >> valor;
         conta = banco->pesquisa(id);
 
-        if (conta != nullptr)
+        if (conta != nullptr) {
           conta->saque(valor);
+        } else {
+          cout << "ERRO: conta inexistente" << endl;
+        }
 
         break;
 
@@ -49,8 +55,11 @@ int main() {
         conta = banco->pesquisa(id);
         contaDestino = banco->pesquisa(idDestino);
 
-        if (conta != nullptr && contaDestino != nullptr)
+        if (conta != nullptr && contaDestino != nullptr) {
           conta->pix(*contaDestino, valor);
+        } else {
+          cout << "ERRO: conta inexistente" << endl;
+        }
         
         break;
 
@@ -63,7 +72,7 @@ int main() {
   for(int i = 0; i < banco->_numContas; i++)
     delete banco->_contas[i];
   
-  delete banco;
+  delete [] banco;
 
   return 0;
 }
