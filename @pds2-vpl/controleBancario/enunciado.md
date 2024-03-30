@@ -46,24 +46,24 @@ T: termina a execução do programa.
 
 Segue abaixo um exemplo de uma execução do Sistema:
 
-C 123 Luiz
-conta criada
-C 123 Maria
-ERRO: conta repetida
-C 999 Maria
-conta criada
-D 123 1000
-deposito efetuado
-S 555 500
-ERRO: conta inexistente
-S 123 200
-saque efetuado
-P 123 999 300
-pix efetuado
-I
-123 Luiz 500.00
-999 Maria 300.00
-T
+C 123 Luiz <br>
+conta criada <br>
+C 123 Maria <br>
+ERRO: conta repetida <br>
+C 999 Maria <br>
+conta criada <br>
+D 123 1000 <br>
+deposito efetuado <br>
+S 555 500 <br>
+ERRO: conta inexistente <br>
+S 123 200 <br>
+saque efetuado <br>
+P 123 999 300 <br>
+pix efetuado <br>
+I <br>
+123 Luiz 500.00 <br>
+999 Maria 300.00 <br>
+T <br>
 
 Você deverá submeter 5 arquivos: ContaBancaria.hpp, ContaBancaria.cpp, Banco.hpp, Banco.cpp e main.cpp. No seu programa principal, você não deverá acessar diretamente os atributos dos seus TADs. Todo o acesso deverá ser feito através dos métodos implementados.
 
