@@ -66,8 +66,6 @@ int main() {
 
   }
 
-  arquivo.close();
-
   std::sort(palavras.begin(), palavras.end(), ordenarPalavras);
 
   for (size_t i = 0; i < palavras.size(); i++) {
