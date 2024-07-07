@@ -96,28 +96,28 @@ class Circulo : public FiguraGeometrica {
 float FiguraGeometrica::areaTotal = 0.0;
 
 int main() {
-  std::vector<std::unique_ptr<FiguraGeometrica>> figuras;
+  std::vector<FiguraGeometrica*> figuras;
   char option;
 
   while ((std::cin >> option) && option != 'E') {
     if(option == 'R') {
       int c1, c2, lado1, lado2;
       std::cin >> c1 >> c2 >> lado1 >> lado2; 
-      figuras.push_back(std::make_unique<Retangulo>(c1, c2, lado1, lado2));
+      figuras.push_back(new Retangulo(c1, c2, lado1, lado2));
       continue;
     }
 
     if(option == 'C') {
       int c1, c2, raio;
       std::cin >> c1 >> c2 >> raio; 
-      figuras.push_back(std::make_unique<Circulo>(c1, c2, raio));
+      figuras.push_back(new Circulo(c1, c2, raio));
       continue;
     }
 
     if(option == 'T') {
       int c1, c2, base, altura;
       std::cin >> c1 >> c2 >> base >> altura; 
-      figuras.push_back(std::make_unique<Triangulo>(c1, c2, base, altura));
+      figuras.push_back(new Triangulo(c1, c2, base, altura));
       continue;
     }
 
@@ -134,6 +134,9 @@ int main() {
       continue;
     }
   }
+
+  for(auto& figura : figuras)
+    delete figura;
 
   return 0;
 }
